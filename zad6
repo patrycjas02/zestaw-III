@@ -1,0 +1,39 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main (){
+
+    int n;
+    cout<<"Podaj liczbe: ";
+    cin>>n;
+    cout<<endl<<"Czy "<<n<<" jest liczba pierwsza?";
+
+    if((n==2)||(n<2)){
+        cout<<endl<<"tak"<<endl;
+    }
+    else{
+        int tmp=0;
+        if(n%2==0){
+            cout<<endl<<"nie"<<endl;
+        }
+        else{
+            for(int i=3; i<=sqrt(n); i=i+2){
+                if(n%i==0){
+                    tmp=tmp+1;
+                    break;
+                }
+            }
+            if(tmp==0){
+                cout<<endl<<"tak"<<endl;
+            }
+            else{
+                cout<<endl<<"nie"<<endl;
+            }
+        }
+    }
+
+
+return 0;
+}
