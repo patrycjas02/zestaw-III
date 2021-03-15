@@ -1,0 +1,25 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main (){
+
+    int a,b,c;
+    cout<<"Podaj pierwsza liczbe: ";
+    cin>>a;
+    cout<<"Podaj druga liczbe: ";
+    cin>>b;
+
+    while(a!=b){
+        c=abs(a-b);
+        if(a>b){
+            a=b;
+        }
+        b=c;
+    }
+
+    cout<<endl<<"Najwiekszym wspolnym dzielnikiem podanych liczb jest: "<<c<<endl;
+
+return 0;
+}
