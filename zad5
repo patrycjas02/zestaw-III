@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main (){
+
+    int a,b,c,d,e;
+    cout<<"Podaj pierwsza liczbe: ";
+    cin>>a;
+    cout<<"Podaj druga liczbe: ";
+    cin>>b;
+    c=a;
+    d=b;
+
+    while(a!=b){
+        e=abs(a-b);
+        if(b<a){
+            a=b;
+        }
+        b=e;
+    }
+
+    cout<<endl<<"Najmniejsza wspolna wielokrotnoscia podanych liczb jest: "<<(d*c)/a<<endl;
+
+return 0;
+}
