@@ -1,0 +1,30 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main (){
+
+    cout<<"Ile pierwszych liczb Fibonacciego wypisac? ";
+
+    int n,a=0,b=1,c;
+    cin>>n;
+    int i=0;
+
+    if(n==1){
+        cout<<a;
+    }
+    else if(n>1){
+        cout<<a<<", "<<b;
+    }
+
+    while(i<n){
+        c=a+b;
+        cout<<", "<<c;
+        a=b;
+        b=c;
+        i++;
+    }
+
+return 0;
+}
