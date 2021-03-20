@@ -10,7 +10,7 @@ int main (){
     cin>>n;
     cout<<endl<<"Czy "<<n<<" jest liczba pierwsza?";
 
-    if((n==2)||(n<2)){
+    if(n==2){
         cout<<endl<<"tak"<<endl;
     }
     else{
@@ -37,3 +37,4 @@ int main (){
 
 return 0;
 }
+
