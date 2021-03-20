@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main (){
+
+    int n;
+    int ile_dzielnikow;
+    int kolejne_rzeczywiste=0;
+
+    cout<<"Ile liczb pierwszych wypisac: ";
+    cin>>n;
+
+    for (int liczba = 2; kolejne_rzeczywiste<n; liczba++){
+         ile_dzielnikow = 0;
+
+         for (int i=2; i<=sqrt(liczba); i++){
+            if (liczba%i == 0){
+                ile_dzielnikow++;
+            }
+         }
+
+         if (ile_dzielnikow == 0){
+            if(kolejne_rzeczywiste == n-1){
+                cout<< liczba<< endl;
+            }
+            else {
+                cout<< liczba<< " ";
+            }
+            kolejne_rzeczywiste++;
+         }
+    }
+
+return 0;
+}
