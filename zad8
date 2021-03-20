@@ -1,0 +1,43 @@
+#include <iostream>
+#include <math.h>
+#include <ctime>
+
+using namespace std;
+
+int main (){
+
+    srand( time(NULL));
+    int losowa = rand()%101+0;
+
+    cout<<"Sprobuj zgadnac liczbe!"<<endl;
+
+    int proba;
+
+
+    for(int i=0; i<10; i++){
+        cin>>proba;
+
+        if(proba==losowa){
+            cout<<"Udalo sie! Gratuluje!"<<endl<<"Sukces osiagniety w "<<i+1<<" rundzie."<<endl;
+            break;
+        }
+        else{
+            if(i<9){
+                cout<<"Pudlo! Sprobuj jeszcze raz."<<endl;
+
+                if(proba>losowa){
+                    cout<<"Obniz loty!"<<endl;
+                }
+                else{
+                    cout<<"Celuj wyzej!"<<endl;
+                }
+            }
+            else cout<<"Przykro mi. Nie udalo sie odgadnac liczby :("<< endl;
+
+        }
+
+
+    }
+
+return 0;
+}
